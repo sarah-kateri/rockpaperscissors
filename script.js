@@ -1,3 +1,5 @@
+function playRound() {
+
 function getRandomInt() {
     return Math.floor(Math.random() * 3);
 }
@@ -16,10 +18,13 @@ function getComputerChoice() {
     }
 }
 
-function playRound() {
-    let playerSelection = prompt("What is your choice? Rock Paper Scissors");
-    const computerSelection = getComputerChoice();
-    console.log("CPU plays " + getComputerChoice());
+
+let playerSelection = prompt("What is your choice? Rock Paper Scissors");
+
+const computerSelection = getComputerChoice();
+
+console.log("CPU plays " + getComputerChoice());
+
     if (playerSelection == computerSelection) {
         console.log("It's a tie. Play again.");
     } else if (playerSelection == "rock" && computerSelection == "paper") {
@@ -35,8 +40,15 @@ function playRound() {
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
         console.log("You win! Scissors cuts paper.")
     } else {   
-        console.log("The game is broken.");
+        console.log("Choose a weapon.");
     }
 }
 
-playRound();
+function game() {
+    let i = playRound();
+    for (let i = 0; i < 4; i++) {
+        playRound();
+    }
+}
+
+game();
