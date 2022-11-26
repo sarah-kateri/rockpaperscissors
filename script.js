@@ -2,18 +2,41 @@ function getRandomInt() {
     return Math.floor(Math.random() * 3);
 }
 
-let num = getRandomInt();
+const compChoice = getRandomInt();
 
 function getComputerChoice() {
-    if (num == 0) {
-        console.log("Rock");
-    } else if (num == 1) {
-        console.log("Paper");
-    } else if (num == 2) {
-        console.log("Scissors");
+    if (compChoice == 0) {
+        return ("rock");
+    } else if (compChoice == 1) {
+        return ("paper");
+    } else if (compChoice == 2) {
+        return ("scissors");
     } else {
         console.log("Something went wrong")
     }
 }
 
-getComputerChoice();
+function playRound() {
+    let playerSelection = prompt("What is your choice? Rock Paper Scissors");
+    const computerSelection = getComputerChoice();
+    console.log("CPU plays " + getComputerChoice());
+    if (playerSelection == computerSelection) {
+        console.log("It's a tie. Play again.");
+    } else if (playerSelection == "rock" && computerSelection == "paper") {
+        console.log("You lose. Paper covers rock.")
+    } else if (playerSelection == "rock" && computerSelection == "scissors") {
+        console.log("You win! Rock crushes scissors.")
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
+        console.log("You win! Paper covers rock.")
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        console.log("You lose. Scissors cuts paper.")
+    } else if (playerSelection == "scissors" && computerSelection == "rock") {
+        console.log("You lose. Rock crushes scissors.")
+    } else if (playerSelection == "scissors" && computerSelection == "paper") {
+        console.log("You win! Scissors cuts paper.")
+    } else {   
+        console.log("The game is broken.");
+    }
+}
+
+playRound();
