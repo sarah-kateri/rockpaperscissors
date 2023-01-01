@@ -49,27 +49,21 @@ function playRound(playerSelection) {
         round.textContent = "It's a tie. Play again.";
     } else if (playerSelection == "rock" && computerSelection == "paper") {
         round.textContent = "You lose. Paper covers rock.";
-        console.count("CPU");
         cpucount.textContent = "CPU: " + ++countCPU;
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
         round.textContent = "You win! Rock crushes scissors.";
-        console.count("You");
         playercount.textContent = "You: " + ++countPlayer;
     } else if (playerSelection == "paper" && computerSelection == "rock") {
         round.textContent = "You win! Paper covers rock.";
-        console.count("You");
         playercount.textContent = "You: " + ++countPlayer;
     } else if (playerSelection == "paper" && computerSelection == "scissors") {
         round.textContent = "You lose. Scissors cuts paper.";
-        console.count("CPU");
         cpucount.textContent = "CPU: " + ++countCPU;
     } else if (playerSelection == "scissors" && computerSelection == "rock") {
         round.textContent = "You lose. Rock crushes scissors."
-        console.count("CPU");
         cpucount.textContent = "CPU: " + ++countCPU;
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
         round.textContent = "You win! Scissors cuts paper.";
-        console.count("You");
         playercount.textContent = "You: " + ++countPlayer;
     } else {   
         round.textContent = "Choose a weapon.";
@@ -83,7 +77,7 @@ function playRound(playerSelection) {
         } 
         }
     winOrLose();
-       
+    
 }
     
             
