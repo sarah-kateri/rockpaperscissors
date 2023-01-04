@@ -3,19 +3,32 @@
     <head>
         <title>Rock Paper Scissors</title>   
         <meta charset="utf-8">
+        <link rel="stylesheet" href="./style.css">
         <script src="./script.js" defer></script>
     </head>
     <body>
-        <heading>Rock Paper Scissors</heading>
-        <button class="rock">Rock</button>
-        <button class="paper">Paper</button>
-        <button class="scissors">Scissors</button>
-        <div class="cpuplays"></div>
-        <div class="round"></div>
-        <div class="counters">
-            <div class="playercount">You:  </div>
-            <div class="cpucount">CPU:  </div>
-        </div>
-        <div class="results"></div>
+        <div class = "viewrange-container">
+          <header>Choose a weapon.</header>
+          <div class = "button-container">
+            <button class="rock">
+              <img src="./images/rock.png">
+            </button>
+            <button class="paper">
+              <img src="./images/paper.png">
+            </button>
+            <button class="scissors">
+              <img src="./images/scissors.png">
+            </button>
+          </div> 
+            <div class="roundresults">
+              <div class="cpuplays"></div>
+              <div class="round"></div>
+            </div>  
+            <div class="counters">
+                <div class="playercount">You: &nbsp;</div>
+                <div class="cpucount">CPU: &nbsp;</div>
+            </div>
+            <div class="results"></div>
+        </div>   
     </body>
 </html>

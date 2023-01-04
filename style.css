@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+}
+
+.viewrange-container {
+    min-height: 100vh;
+}
+
+header {
+    color: royalblue;
+    font-family: Courier, monospace;
+    font-size: 64px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0px;
+}
+
+button {
+    height: 225px;
+    width: 225px;
+    background-color: royalblue;
+    border-radius: 40px;
+    border: 8px solid goldenrod;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.roundresults {
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    font-family: Courier, monospace;
+    color: goldenrod;
+    height: 40px;
+}
+
+.cpuplays {
+    margin-right: 16px;
+}
+
+.playercount {
+    margin-right: 70px;
+}
+
+.cpucount {
+    margin-right: 70px;
+    color: goldenrod;
+}
+
+.counters {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 48px;
+    font-family: Courier, monospace;
+    color: royalblue;
+    margin: 40px 0 0 0;
+}
+
+.results {
+    color: red;
+    font-family: Courier, monospace;
+    font-weight: bold;
+    font-size: 100px;
+    position: absolute;
+    left: 10vh;
+    top: 40vh;
+    border-radius: 40px;
+    text-shadow: 6px 6px 0 black;
+}

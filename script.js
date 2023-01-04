@@ -43,7 +43,7 @@ function playRound(playerSelection) {
     } 
 
     const computerSelection = getComputerChoice();
-    cpuplays.textContent = "CPU plays " + getComputerChoice();
+    cpuplays.textContent = "CPU plays " + getComputerChoice() + ": ";
     
     if (playerSelection == computerSelection) {
         round.textContent = "It's a tie. Play again.";
@@ -72,10 +72,17 @@ function playRound(playerSelection) {
     function winOrLose() {    
         if (countPlayer === 5) {  
             results.textContent = "YOU ARE THE WINNER!";
+            rock.setAttribute("disabled", 1);
+            paper.setAttribute("disabled", 1);
+            scissors.setAttribute("disabled", 1);
         } else if (countCPU === 5) {
             results.textContent = "YOU ARE THE LOSER.";
-        } 
+            rock.setAttribute("disabled", 1);
+            paper.setAttribute("disabled", 1);
+            scissors.setAttribute("disabled", 1);
         }
+        }
+
     winOrLose();
     
 }
